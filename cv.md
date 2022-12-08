@@ -17,3 +17,5 @@ nv;obv;ncu;aom'aa,,'a
 -------
 ### Skills & Knowledges
 jhshhshdhdhhd 
+------
+Thank you!
