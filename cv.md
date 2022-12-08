@@ -8,9 +8,9 @@
 domi@gmail.com
 ---------
 ### Education:
-1. Freelancer life style
-2. Lorem8
-3. hhhhhhhhhhh
+1. [Freelancer life style] (https://www.youtube.com/@FreelancerLifeStyle)
+2. [Freelancer life style] (https://www.youtube.com/@FreelancerLifeStyle)
+3. [Freelancer life style] (https://www.youtube.com/@FreelancerLifeStyle)
 ------
 ### Experiance:
 nv;obv;ncu;aom'aa,,'a
