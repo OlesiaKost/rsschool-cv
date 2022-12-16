@@ -1,0 +1,329 @@
+
+body {
+   font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: rgb(245, 229, 214);
+   margin: 0 auto;
+   padding: 20px 15px;
+   max-width: 1200px;
+   display: grid;
+   gap: 20px;
+   font-size: 18px;
+   line-height: 1.5;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "hd hd hd"
+      "sd pg pg"
+      "ft ft ft";
+}
+
+@media (max-width: 460px) {
+   body {
+       font-size: 16px;
+         padding: 10px 10px;
+   }
+}
+a {
+   text-decoration: none;
+   color: #000;
+}
+
+li {
+   list-style: none;
+   padding: 0;
+}
+h1, h2, h3, ul {
+   padding: 0;
+   margin: 0;
+}
+ h1, h2 {
+   line-height: 2;
+ }
+@media (max-width: 465px) {
+    h1, h2 {
+   line-height: 1,5;
+   font-size: 19px;
+ }
+}
+/* -------------------- aside -------------    */
+.sidebar {
+   background-color: rgb(223, 154, 209);
+   min-width: 260px;
+   grid-area: sd;
+}
+
+.sidebar__container {
+   padding: 30px 15px;
+}
+@media (max-width: 900px) {
+   .sidebar__container {
+      font-size: 16px;}
+  
+}
+@media (max-width: 460px) {
+   .sidebar__container {
+   padding: 20px 10px;
+}
+}
+.sidebar__content {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+.aside__avatar {
+   text-align: center;
+   background: rgb(22, 230, 230);
+   width: 220px;
+   height: 270px;
+   margin: 0 auto;
+   border-radius: 20px;
+}
+img {
+  max-width: 85%;
+   border-radius: 20px;
+}
+
+/* -------------------- header -------------    */
+.header {
+   grid-area: hd;
+  padding-bottom: 30px;
+   padding-top: 30px;
+}
+@media (max-width: 768px) {
+.header {
+  padding-bottom: 20px;
+   padding-top: 20px;
+}
+}
+.header__container { 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+     margin: 0 auto;
+   max-width: 1200px;
+}
+
+.header__menu {}
+.menu {}
+.menu__body{}
+.menu__list {
+   display: flex;
+   column-gap: 40px;
+   row-gap: 10px;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.menu__item {
+  list-style-type: none;
+}
+.menu__link  {
+   color: rgb(22, 230, 230);
+   font-weight: 600;
+   font-size: 25px;
+   text-shadow: rgb(223, 154, 209) 5px 10px 20px;
+   letter-spacing: 3px;
+   white-space: nowrap;
+   line-height: 2.6;
+}
+.menu__link:hover {
+   text-shadow: rgb(223, 140, 206) 15px 20px 30px;
+   text-decoration-line: underline;
+   text-decoration-color: #ec8dd9;
+   transition: all ease .8s;
+}
+
+
+/* -------------------- contact -------------    */
+.contacts__title {
+   text-align: center;
+}
+.fa-envelope, .fa-phone, .fa-viber, .fa-github, .fa-github {
+ color: #15e5e5;
+ text-shadow: rgb(223, 154, 209) 1px 0 20px;
+}
+.fa-envelope, .fa-phone, .fa-viber, .fa-github, .fa-github {
+ color: #15e5e5;
+ text-shadow: rgb(223, 154, 209) 1px 0 20px;
+ transition: all ease 0.5s;
+}
+.contacts__link {
+   margin-right: 10px;
+   line-height: 1.7;
+}
+.fa-envelope:hover, .fa-phone:hover, .fa-viber:hover, .fa-github:hover, .fa-github:hover {
+   font-weight: 900;
+   font-size: 20px;
+}
+.contacts__description {
+   transition: all ease 0.5 ;
+}
+.contacts__description:hover {
+ font-weight: 700;
+}
+/* -------------------- main-section -------------    */
+.title__value {
+   font-size: 35px;
+   letter-spacing: 5px;
+   font-weight: 800;
+}
+.main-section__title {
+    text-align: center;
+    line-height: 1;
+}
+@media (max-width: 768px) {
+   .main-section__title {
+    text-align: left;
+    line-height: 1;
+}
+}
+@media (max-width: 768px) {
+   .title__value {
+   font-size: 25px;
+   letter-spacing: 2px;
+   font-weight: 600;
+}
+}
+
+@media (max-width: 460px) {
+   .title__value {
+   font-size: 23px;
+   letter-spacing: 1px;
+}
+}
+span {
+   color: #ec8dd9;
+}
+.main-section__text {
+   margin-top: 50px;
+}
+/* -------------------- education -------------    */
+.education__title {
+   text-align: center;
+}
+
+.content-eduacation {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   line-height: 1.5;
+}
+.content-education__institution {
+   font-size: 20px;
+   font-weight: 500;
+}
+/* -------------------- contact -------------    */
+.contacts__description {
+   display: inline-block;
+}
+.contacts__title {}
+
+/* -------------------- skills -------------    */
+.skills__container {
+   margin-top: 50px; 
+   white-space: nowrap;
+}
+.type-skills {
+   display: grid;
+   gap: 15px;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.languages-skills__span {
+   font-weight: 600;
+   color: #000;
+}
+
+/* -------------------- portfolio -------------    */
+.portfolio__container {
+   margin-top: 50px; 
+}
+.content-portfolio {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   gap: 15px;
+   margin-top: 30px;
+}
+.content-portfolio__item {
+   background:hsl(312, 52%, 74%);
+   padding: 10px;
+   gap: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.content-portfolio__image {
+overflow: hidden;
+border-radius: 20px;
+}
+.content-portfolio__image-link {
+transition: all ease 0.5s;
+filter: blur(1px);
+max-width: 100%;
+}
+.content-portfolio__image-link:hover {
+   transform: scale(1.1);
+   filter: blur(0px);
+   border-radius: 20px;
+}
+.content-portfolio__description:hover {
+  transition: all ease 0.5s;
+  font-size: 20px;
+  font-weight: 600;
+
+}
+/* -------------------- footer -------------    */
+.footer {
+   grid-area: ft;
+    text-shadow: rgb(192, 122, 179) 1px 0 10px;
+}
+
+.footer__container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1200px;
+   padding: 30px 10px;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.footer__item {
+   box-shadow: rgb(192, 122, 179) 1px 0 10px;
+    padding: 5px 10px;
+}
+
+
+.footer__item_github {
+order: 1;
+}
+.footer__item_copy {
+   order: 2;
+}
+.footer__item_rsschool {
+   order: 3;
+}
+
+@media (max-width: 426px) {
+.footer__item_github {
+order: 1;
+}
+.footer__item_copy {
+   order: 3;
+}
+.footer__item_rsschool {
+   order: 2;
+}
+.footer__container {
+   justify-content: center;
+}
+}
+.page {
+   grid-area: pg;
+}
+
+
+
+
+
+
