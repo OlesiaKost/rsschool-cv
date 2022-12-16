@@ -1,5 +1,2 @@
-test
-
-Olesia Kostiuchenko - new text
-
-Education: https://www.youtube.com/@FreelancerLifeStyle !
+https://OlesiaKost.github.io/rsschool-cv/cv
+https://OlesiaKost.github.io/rsschool-cv/
