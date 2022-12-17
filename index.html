@@ -17,8 +17,9 @@
                <ul class="menu__list">
                   <li class="menu__item"><a  href="#main" class="menu__link">About Me</a></li>
                   <li class="menu__item"><a  href="#contact" class="menu__link">Contact</a></li>
-                  <li class="menu__item"><a  href="#skills" class="menu__link">Skills</a></li>
                   <li class="menu__item"><a  href="#education" class="menu__link">Education</a></li>
+                     <li class="menu__item"><a href="#skills" class="menu__link">Skills</a></li>
+                  <li class="menu__item"><a href="#code" class="menu__link">Code</a></li>
                   <li class="menu__item"><a href="#portfolio" class="menu__link">Portfolio</a></li>
                </ul>
             </nav>
@@ -99,7 +100,7 @@
                </div>
                <div class="main-section__text">
                   <h2 class="text__title">Briefly about me</h2>
-                  <p class="text__description"> Creative front-end developer with more than +1 years. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vitae rem asperiores ratione in aperiam doloribus odit itaque! Odio, in. Passionate about UI/UX</p>
+                  <p class="text__description"> Creative junior front-end developer with more than +1 year experiance. After 10 years working in sales with a hundreds of people i've finally found my dream - creating small items, which makes our life easier and more colorful. Passionate about UI/UX</p>
                </div>
             </div>
          </div>
@@ -108,9 +109,10 @@
 
       <section  id="skills" class="page__skills skills">
          <div class="skills__container">
+            <h2 class="skills__title">Skills</h2>
           <div class="skills__type type-skills">
             <div class="type-skills__hard-skills hard-skills">
-               <h2 class="hard-skills__title">Hard skills</h2>
+               <h3 class="hard-skills__title">Hard skills</h3>
                <ul class="hard-skills__list">
                   <li class="hard-skills__item">HTML5</li>
                   <li class="hard-skills__item">CSS3, SASS (SCSS)</li>
@@ -121,18 +123,18 @@
                </ul>
             </div>
             <div class="type-skills__soft-skills soft-skills">
-               <h2 class="soft-skills__title">Soft skills</h2>
+               <h3 class="soft-skills__title">Soft skills</h3>
                <ul class="soft-skills__list">
                   <li class="soft-skills__item">Organization</li>
                   <li class="soft-skills__item">Perseverance</li>
                   <li class="soft-skills__item">Creativity</li>
-                  <li class="soft-skills__item">Creativity</li>
+                  <li class="soft-skills__item">Friendly</li>
                </ul>
                </div>
                <div class="type-skills__languages-skills languages-skills">
-                  <h2 class="languages-skills__title">Languages</h2>
+                  <h3 class="languages-skills__title">Languages</h3>
                   <ul class="languages-skills__list">
-                     <li class="languages-skills__item">English <span class="languages-skills__span">B1</span></li>
+                     <li class="languages-skills__item">English <span class="languages-skills__span">B2</span></li>
                      <li class="languages-skills__item">Russian <span class="languages-skills__span">Native</span></li>
                      <li class="languages-skills__item">Spanish <span class="languages-skills__span">A2</span></li>
                      <li class="languages-skills__item">Ukranian <span class="languages-skills__span">A2</span></li>
@@ -145,7 +147,35 @@
          </div>
       </section>
 
-     
+     <section id="code" class="page__code code">
+      <div class="code__container">
+         <div class="code__content">
+            <h2 class="code__title">Code</h2>
+            <div class="code__description">
+               <pre>
+   const span = document.querySelector('.hover-btn2')
+   const overlay = document.querySelector('.overlay')
+               
+    window.addEventListener('mousemove', (e) => {
+      const {clientX, clientY} = e;
+      const x = Math.round((clientX / window.innerWidth) * 100);
+      const y = Math.round((clientY / window.innerHeight) * 100);
+               
+      gsap.to(overlay, {
+      '--x': `${x}%`,
+      '--y': `${y}%`,
+      duration: 0.3,
+      ease: `sine.out`
+      }) })
+               
+   span.addEventListener('click', () => {
+      overlay.classList.toggle('is-open')
+    })
+               </pre>
+            </div>
+         </div>
+      </div>
+     </section>
 
       <section id="portfolio" class="page__portfolio portfolio">
          <div class="portfolio__container">
@@ -160,9 +190,9 @@
                </div>
                <div class="content-portfolio__item ">
                   <a href="#" class="content-portfolio__image">
-                     <img class="content-portfolio__image-link" src="CoffeeHouse.png" alt="Link to work">
+                     <img class="content-portfolio__image-link" src="CV-OK.png" alt="Link to my work">
                   </a>
-                  <a href="#"  class="content-portfolio__description">Jym</a>
+                  <a href="#"  class="content-portfolio__description">CV</a>
                </div>
                <div class="content-portfolio__item">
                   <a href="#" class="content-portfolio__image">
@@ -211,7 +241,6 @@
       </div>
    </footer>
    
-   
-   <script src="/js/script.js"></script>
 </body>
 </html>
+
