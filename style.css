@@ -1,16 +1,19 @@
 body {
-   font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-  background: rgb(245, 229, 214);
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   background:#EBB6CE;
+   color: #5A3A0A;
    margin: 0 auto;
-   padding: 20px 15px;
    max-width: 1200px;
+   padding: 20px 15px;
    display: grid;
    gap: 20px;
-   font-size: 18px;
+   font-size: 20px;
    line-height: 1.5;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       "hd hd hd"
+      "tn tn tn"
       "sd pg pg"
       "ft ft ft";
 }
@@ -18,12 +21,12 @@ body {
 @media (max-width: 460px) {
    body {
        font-size: 16px;
-         padding: 10px 10px;
+       padding: 10px 10px 0px;
    }
 }
 a {
    text-decoration: none;
-   color: #000;
+   color: #5A3A0A;
 }
 
 li {
@@ -43,45 +46,6 @@ h1, h2, h3, ul {
    font-size: 19px;
  }
 }
-/* -------------------- aside -------------    */
-.sidebar {
-   background-color: rgb(223, 154, 209);
-    margin-top: 100px;
-   min-width: 260px;
-   grid-area: sd;
-}
-
-.sidebar__container {
-   padding: 30px 15px;
-}
-@media (max-width: 900px) {
-   .sidebar__container {
-      font-size: 16px;}
-  
-}
-@media (max-width: 460px) {
-   .sidebar__container {
-   padding: 20px 10px;
-}
-}
-.sidebar__content {
-   display: flex;
-   flex-direction: column;
-   gap: 30px;
-}
-.aside__avatar {
-   text-align: center;
-   background: rgb(22, 230, 230);
-   width: 220px;
-   height: 270px;
-   margin: 0 auto;
-   border-radius: 20px;
-}
-img {
-  max-width: 85%;
-   border-radius: 20px;
-}
-
 /* -------------------- header -------------    */
 .header {
    grid-area: hd;
@@ -91,7 +55,8 @@ img {
    top: 0;
    left: 0;
    width: 100%;
-    background: rgba(245, 229, 214, 0.9);
+    background:rgba(242, 216, 229, 0.7);
+    z-index: 100;
 }
 @media (max-width: 768px) {
 .header {
@@ -119,11 +84,11 @@ img {
   list-style-type: none;
 }
 .menu__link  {
-   color: rgb(22, 230, 230);
+   font-family: 'Montserrat';
+   font-style: normal;
    font-weight: 600;
-   font-size: 25px;
-   text-shadow: rgb(223, 154, 209) 5px 10px 20px;
-   letter-spacing: 3px;
+   font-size: 24px;
+   line-height: 29px;
    white-space: nowrap;
    
 }
@@ -133,6 +98,97 @@ img {
    text-decoration-color: #ec8dd9;
    transition: all ease .8s;
 }
+/* -------------------- title -------------    */
+
+.title-name {
+    grid-area: tn;
+    background: #EAC9E1;
+    padding: 30px 10px;
+    margin-top: 100px;
+    border-radius: 40px;
+    }
+.title-name__occupation {
+   text-align: center;
+   font-size: 30px;
+   color: #fff;
+}
+
+.title-name__name {
+   text-align: center;
+}
+/* -------------------- aside -------------    */
+.sidebar {
+   background: #E8C8F4;
+   border-radius: 40px;
+   margin-top: 50px;
+   min-width: 260px;
+   grid-area: sd;
+}
+
+.sidebar__container {
+   padding: 30px 15px;
+  
+}
+@media (max-width: 900px) {
+   .sidebar__container {
+      font-size: 16px;}
+  
+}
+@media (max-width: 460px) {
+   .sidebar__container {
+   padding: 20px 10px;
+}
+}
+.sidebar__content {
+   display: flex;
+   flex-direction: column;
+   
+   gap: 30px;
+   min-height: 100%;
+   position: relative;
+}
+.aside__avatar {
+   text-align: center;
+   background: #B0E6E9;
+   max-width: 280px;
+   max-height: 280px;
+   border-radius: 50%;
+   overflow: hidden;
+   margin: 0 auto;
+   border: 15px solid  #B0E6E9;
+}
+img {
+  width: 90%;
+}
+.pictures {
+
+   position: absolute;
+   top: 120%;
+   left: -50px;
+}
+.pictures__items {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+}
+
+
+.pictures__item img{
+ width: 160%;
+}
+
+.pictures__item_first {
+     transform: rotate(-30deg);
+}
+.pictures__item_second {
+   transform: scale(1.4);
+}
+
+.pictures__item_third {
+   transform: rotate(30deg);
+
+}
 
 
 /* -------------------- contact -------------    */
@@ -140,11 +196,11 @@ img {
    text-align: center;
 }
 .fa-envelope, .fa-phone, .fa-viber, .fa-github, .fa-github {
- color: #15e5e5;
+ color: #B0E6E9;
  text-shadow: rgb(223, 154, 209) 1px 0 20px;
 }
 .fa-envelope, .fa-phone, .fa-viber, .fa-github, .fa-github {
- color: #15e5e5;
+ color: #B0E6E9;
  text-shadow: rgb(223, 154, 209) 1px 0 20px;
  transition: all ease 0.5s;
 }
@@ -166,44 +222,15 @@ img {
 
 .page {
    grid-area: pg;
-     margin-top: 120px;
-}
-.title__value {
-   font-size: 35px;
-   letter-spacing: 5px;
-   font-weight: 800;
-}
-.main-section__title {
-    text-align: center;
-    line-height: 1;
-}
-@media (max-width: 768px) {
-   .main-section__title {
-    text-align: left;
-    line-height: 1;
-}
-}
-@media (max-width: 768px) {
-   .title__value {
-   font-size: 25px;
-   letter-spacing: 2px;
-   font-weight: 600;
-}
+     margin-top: 50px;
 }
 
-@media (max-width: 460px) {
-   .title__value {
-   font-size: 23px;
-   letter-spacing: 1px;
-}
-}
-span {
-   color: #ec8dd9;
-}
-.main-section__text {
-   margin-top: 50px;
-}
+
 /* -------------------- education -------------    */
+.sidebar__education {
+   flex: 1 1 auto;
+}
+
 .education__title {
    text-align: center;
 }
@@ -237,22 +264,56 @@ span {
 
 .languages-skills__span {
    font-weight: 600;
-   color: #000;
+    color:  #B0E6E9;
 }
 
 /* -------------------- code -------------    */
+.code__container {
+   position: relative;
+}
 .code__title {
    margin-top: 30px;
 }
 .code__description {
-   font-size: 14px;
+   font-size: 18px;
    line-height: 1.5;
+   white-space: wrap;
+}
+.pre {
    white-space: wrap;
 }
 @media (max-width: 768px) {
    .code {
    font-size: 10px;
     line-height: 1;
+}
+}
+
+@media (max-width: 448px) {
+   .code {
+   font-size: 6px;
+    line-height: 1;
+}}
+
+.code__image {
+   position: absolute;
+   z-index: -1;
+   right: 8%;
+   top: 60%;
+   transform: scale(1.2);
+}
+@media (max-width: 1000px) {
+   .code__image {
+   right: 0%;
+   top: 45%;
+   transform: scale(1);
+}
+}
+@media (max-width: 768px) {
+   .code__image {
+   right: -20%;
+   top: 90%;
+   transform: scale(0.7);
 }
 }
 /* -------------------- portfolio -------------    */
@@ -266,7 +327,8 @@ span {
    margin-top: 30px;
 }
 .content-portfolio__item {
-   background:hsl(312, 52%, 74%);
+   background: #E8C8F4;
+   border-radius: 40px;
    padding: 10px;
    gap: 10px;
    display: flex;
@@ -303,6 +365,9 @@ max-height: 150px;
 .footer {
    grid-area: ft;
     text-shadow: rgb(192, 122, 179) 1px 0 10px;
+    color: #b0e6e9;
+    background: #ECA5C5;
+   border-radius: 40px;
 }
 
 .footer__container {
@@ -326,7 +391,7 @@ max-height: 150px;
 }
 
 .footer__link:hover .fa-github {
-     color: #10c3c3; 
+     color: #10c1c1; 
 }
 .footer__item_github {
 order: 1;
@@ -352,6 +417,7 @@ order: 1;
    justify-content: center;
 }
 }
+
 
 
 
